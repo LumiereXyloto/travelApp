@@ -80,6 +80,8 @@ export default {
 <style lang="stylus" scoped>
   @import '~@/assets/styles/varibles.styl'
   @import '~@/assets/styles/mixins.styl'
+  .icons
+    margin-top: .1rem
   .icons >>> .swiper-container
     width: 100%
     height: 0
