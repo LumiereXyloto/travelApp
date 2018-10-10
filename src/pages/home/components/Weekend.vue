@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wraper">
           <img :src="item.imgUrl" class="item-img">
         </div>
@@ -18,43 +18,45 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
-        title: '武隆天坑地缝国家地质公园',
-        desc: '详情介绍/星级/评论数'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
-        title: '武隆天坑地缝国家地质公园',
-        desc: '详情介绍/星级/评论数'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
-        title: '武隆天坑地缝国家地质公园',
-        desc: '详情介绍/星级/评论数'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
-        title: '武隆天坑地缝国家地质公园',
-        desc: '详情介绍/星级/评论数'
-      }, {
-        id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
-        title: '武隆天坑地缝国家地质公园',
-        desc: '详情介绍/星级/评论数'
-      }]
-    }
+  props: {
+    list: Array
   }
+  // data () {
+  //   return {
+  //     recommendList: [{
+  //       id: '0001',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
+  //       title: '武隆天坑地缝国家地质公园',
+  //       desc: '详情介绍/星级/评论数'
+  //     }, {
+  //       id: '0002',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
+  //       title: '武隆天坑地缝国家地质公园',
+  //       desc: '详情介绍/星级/评论数'
+  //     }, {
+  //       id: '0003',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
+  //       title: '武隆天坑地缝国家地质公园',
+  //       desc: '详情介绍/星级/评论数'
+  //     }, {
+  //       id: '0004',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
+  //       title: '武隆天坑地缝国家地质公园',
+  //       desc: '详情介绍/星级/评论数'
+  //     }, {
+  //       id: '0005',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/48/f117e9b3bf582a.jpg_r_640x214_b8145711.jpg',
+  //       title: '武隆天坑地缝国家地质公园',
+  //       desc: '详情介绍/星级/评论数'
+  //     }]
+  //   }
+  // }
 }
 </script>
 
 <style lang="stylus" scoped>
   @import '~@/assets/styles/mixins.styl'
   .recommend-title
-    margin-top: .2rem
     background: #eeeeee
     line-height: .8rem
     text-indent: .2rem
