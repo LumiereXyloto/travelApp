@@ -1,19 +1,40 @@
 <template>
-  <div class="banner">
-    <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1507/93/2405015feb576b0de03df2d0fba3f71e.water.jpg_600x330_3f1edd82.jpg">
-    <div class="banner-info">
-      <div class="banner-title">茶山竹海(AAAA景区)</div>
-      <div class="banner-number">
-        <span class="iconfont banner-icon">&#xe7b3;</span>
-        10
+  <div>
+    <div class="banner" @click="handleBannerClick">
+      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1507/93/2405015feb576b0de03df2d0fba3f71e.water.jpg_600x330_3f1edd82.jpg">
+      <div class="banner-info">
+        <div class="banner-title">茶山竹海(AAAA景区)</div>
+        <div class="banner-number">
+          <span class="iconfont banner-icon">&#xe7b3;</span>
+          10
+        </div>
       </div>
     </div>
+    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
 <script>
+import CommonGallary from 'common/gallary/Gallary'
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  data () {
+    return {
+      showGallary: false,
+      imgs: ['http://img1.qunarzz.com/sight/p0/1507/93/2405015feb576b0de03df2d0fba3f71e.water.jpg_600x330_3f1edd82.jpg']
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
+  },
+  components: {
+    CommonGallary
+  }
 }
 </script>
 
