@@ -18,6 +18,7 @@
       </router-link>
       景点详情
     </div>
+    <div>hahaha</div>
   </div>
 </template>
 
@@ -34,6 +35,7 @@ export default {
   },
   methods: {
     handleScroll () {
+      console.log('run success')
       const top = document.documentElement.scrollTop
       console.log(top)
       if (top > 60) {
